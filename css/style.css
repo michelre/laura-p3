@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 615px;
+  position: relative;
+  margin: auto;
+  animation: mySlides 2s ease;
+  /* Effet apparition slide */
+  box-shadow: #7c7979 1px 2px 9px 1px;
+  border-radius: 5px;
+}
+
+@keyframes mySlides {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#mySlides fade {
+  width: 712px;
+  height: 264px;
+  box-shadow: #7c7979 1px 2px 9px 1px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+img {
+  border-radius: 5px;
+  margin-bottom: -1%;
+  animation: 2s ease-in-out;
+}
+
+.texte .active {
+  display: flex;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*** Buttons play/paused ***/
+#carouselButtons {
+  margin-left: 48%;
+  position: absolute;
+  bottom: 25%;
+  top: 90%;
+
+}
+
+.fa {
+  color: white;
+  z-index: 2;
+}
+
+#startCycle {
+  position: relative;
+  z-index: 2;
+}
+
+#stopCycle {
+  position: absolute;
+  margin-left: 124%;
+  z-index: 2;
+}
+
+#carouselButtons :hover {
+  color: #00a9b0;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 1%;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: #e04aa4;
+  position: absolute;
+  margin-top: -22%;
+  margin-left: 3%;
+  border-bottom: 2px solid #e04aa4;
+  z-index: 2;
+}
+
+h3 {
+  position: absolute;
+  margin-top: -8%;
+  margin-left: 12%;
+  bottom: 5%;
+  color: white;
+  z-index: 2;
+}
+
+.filtregris {
+  position: absolute;
+  height: 172%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 1;
+  top: 62.5%;
+  margin-bottom: -108%;
+  margin-top: 1.5%;
+  opacity: 0.7;
+  height: 36%;
+  padding-right: 44%;
+  margin-right: -89%;
+  border-radius: 5px;
+}
+
+.texte {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* map */
+.leaflet-container {
+  margin-top: 5%;
+  padding-bottom: 30%;
+  margin-left: 4%;
+  margin-right: 3%;
+  border: double;
+  border-radius: 5px;
+}
+
+.container-map {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Formulaire */
+#reservation-form {
+  width: 100%;
+  flex-shrink: 0; 
+  min-height: 224px;
+  margin-top: 5%;
+  border-radius: 5px;
+  display:none;
+}
+
+#station-info {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+li {
+  padding-bottom: 5%;
+  display: inline-block;
+  padding-bottom: 10%;
+  display: inline-block;
+  margin-bottom: 4%;
+  padding-top: 6%;
+}
+
+#map {
+  width: 100%;
+}
+
+.info-title {
+  text-decoration: underline;
+}
+
+
+/* Canvas */
+#canvas {
+  border: 2px solid black;
+  width: 100%;
+  padding-top: 2%;
+  border-radius: 5px;
+}
+
+#reservation-info {
+  min-height: 100px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin-top: 20px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .container-map {
+    flex-wrap: nowrap;
+  }
+
+  #reservation-form {
+    width: 25%;
+  }
+}

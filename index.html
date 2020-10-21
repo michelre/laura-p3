@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="utf-8" />
+    <title>Bikelib</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h1>Réservez votre vélo en libre service à Lyon</h1>
+    <!--CARROUSEL-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+            <img src="images/bicycles-3798140_1920.jpg" style="width:100%">
+            <div class=texte>
+                <figcaption>
+                    <h2>Etape 1</h2>
+                </figcaption>
+                <h3>Réservez un vélo en quelques clics !</h3>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/bike-4141511_1920.jpg" style="width:100%">
+            <div class=texte>
+                <figcaption>
+                    <h2>Etape 2</h2>
+                </figcaption>
+                <h3>Sur la map, selectionnnez une station pour afficher ses informations et sa disponnibilité</h3>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/bike-4141508_1920.jpg" style="width:100%">
+            <div class=texte>
+                <figcaption>
+                    <h2>Etape 3</h2>
+                </figcaption>
+                <h3>Appuyez sur le bouton réserver, signez dans le champs de signature et validez !</h3>
+            </div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/bicycles-3419243_1920.jpg" style="width:100%">
+            <div class=texte>
+                <figcaption>
+                    <h2>Etape 4</h2>
+                </figcaption>
+                <h3>Une fois la reservation validée, vous avez 20 minutes pour recupérer votre vélo à la station choisie
+                    !</h3>
+            </div>
+        </div>
+
+        <div class="filtregris"></div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Play/Pause -->
+        <div id="carouselButtons">
+            <i class="fa fa-play" id="startCycle"></i>
+            <i class="fa fa-pause" id="stopCycle"></i>
+        </div>
+    </div>
+
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <span class="dot" data-index="4"></span>
+    </div>
+
+    <!-- map -->
+    <div class="container-map">
+        <div id="map">map</div>
+        <div id="reservation-form">
+            <div id="station-info"></div>
+            <form id="form-reservation">
+                <div>
+                    <label for="firstname">Prénom:</label>
+                    <input id="firstname" type="text" placeholder="Prénom" name="firstname">
+                </div>
+                <div>
+                    <label for="lastname">Nom:</label>
+                    <input id="lastname" type="text" placeholder="Nom" name="lastname">
+                </div>
+                <button type="submit">Réserver</button>
+            </form>
+             <!-- Canvas -->
+            <canvas id="canvas"></canvas>
+        </div>
+
+    </div>
+
+    <!-- Réservation information -->
+    <div id="reservation-info"></div>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+   
+    <script src="js/canvas-2.js"></script>
+
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!--<script src="fichierjs.js"></script>-->
+    <script src="js/map.js"></script>
+    <script src="js/carousel.js"></script>
+
+    <!-- jQuery est inclus ! -->
+    <script>
+        jQuery(function ($) {});
+    </script>
+</body>
+
+</html>
